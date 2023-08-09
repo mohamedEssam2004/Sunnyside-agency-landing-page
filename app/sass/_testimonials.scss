@@ -1,15 +1,10 @@
-.testimontials {
-    
+.testimonials {
+
     width: 100%;
     height: auto;
     padding-top: 12rem;
-    // position: relative;
-    // left: 50%;
-    // transform: translateX(-50%);
-    @include breakPointsDown(medium){
-        padding-top: 8rem;
-    }
-    
+    padding-bottom: 12rem;
+
     h2 {
         text-transform: uppercase;
         font-family: 'Fraunces', serif;
@@ -24,37 +19,23 @@
 
 
     .list-items {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        // grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 20rem;
+        width: 100%;
         text-align: center;
-        margin-left: 10%;
-        margin-right: 15%;
-        @include breakPointsDown(medium){
-            padding-top: 8rem;
-            grid-gap: 4rem;
-        }
-        @include breakPointsDown(small){
-            grid-template-columns: 1fr;
-        }
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        // grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
 
         .item {
-            padding-bottom: 8rem;
-            &:first-child {
-                margin-bottom: -6rem;
-            }
-            &:last-child {
-                margin-top: 4rem;
-            }
-        }
+
 
         img {
             width: 60px;
             border-radius: 50%;
         }
         p {
-            width: 295px;
             color: $veryDarkGrayishBlue;
             font-size: 1.5rem;
             padding-top: 4rem;
@@ -64,9 +45,13 @@
                 width: auto;
                 padding-top: 2rem;
             }
+            @include breakPointsDown(small){
+                // width: 600px;
+            }
         }
 
         .item-info {
+            text-align: center;
             span {
                 display: block;
                 &:first-child {
@@ -77,8 +62,17 @@
                     color: $grayishBlue;
                     font-size: 1.3rem;
                     padding-top: 1.3rem;
+                    }
                 }
             }
         }
+    }
+}
+
+
+@media (max-width: 855px){
+    .item:nth-child(2){
+        margin-bottom: 8rem;
+        margin-top: -2rem;
     }
 }

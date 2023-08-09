@@ -1,96 +1,124 @@
 .heroTwo {
     width: 100%;
     height: auto;
-    display: flex;
-    align-items: center;
-    @include breakPointsDown(medium){
-        padding-top: 5rem;
-        padding-bottom: 7rem;
+    // flex-wrap: wrap;
+    margin-top: -5px;
+
+
+    .container {
+        display: flex;
+        align-items: center;
+        @include breakPointsDown(small){
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+
+
+        .hero-img {
+
+            // justify-self: right;
+            flex-basis: 50%;
+
+            img {
+                width: 100%;
+            }
+
+        }
+
+
+
+        // @include breakPointsDown(medium){
+        //     padding-top: 3rem;
+        //     padding-bottom: 1rem;
+        // }
+    
+    
+        .hero-content {
+            // padding-left: 8rem;
+            flex-basis: 50%;
+            padding-left: 10rem;
+            @include breakPointsDown(medium){
+                padding-left: 3rem;
+                padding-top: -4rem;
+            }
+            @include breakPointsDown(small){
+                text-align: center;
+                margin: 0 auto;
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+
+            h2 {
+                color: $veryDarkDesaturatedBlue;
+                width: 40rem;
+                font-family: 'Fraunces', serif;
+                font-size: 4rem;
+                font-weight: 800;
+                @include breakPointsDown(large){
+                    width: 40rem;
+                }
+                @include breakPointsDown(medium){
+                    width: 30rem;
+                    font-size: 3rem;
+                }
+                @include breakPointsDown(small){
+                    width: 400px;
+                    font-size: 4rem;
+                }
+            }
+            p {
+                width: 500px;
+                color: $veryDarkGrayishBlue;
+                line-height: 2.5rem;
+                @include breakPointsDown(large){
+                    width: fit-content;
+                }
+                @include breakPointsDown(medium){
+                    font-size: 1.6rem;
+                    // min-width: 380px;
+                }
+                @include breakPointsDown(small){
+                    width: 270px;
+                    font-size: 1.5rem;
+                    margin: 0 auto;
+                    padding-bottom: 3rem;
+                }
+            }
+            a {
+                position: relative;
+                display: block;
+                padding-top: 2.5rem;
+                font-size: 1.7rem;
+                text-transform: uppercase;
+                font-family: 'Fraunces', serif;
+                color: $veryDarkDesaturatedBlue;
+                // z-index: 1000;
+                @include breakPointsDown(medium){
+                    padding-top: 1rem;
+                }
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: -5px;
+                    bottom: -5%;
+                    border-radius: 3px;
+                    width: 25%;
+                    height: 6px;
+                    background-color: yellow;
+                    opacity: .5;
+                    z-index: 9;
+
+                    @include breakPointsDown(small){
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 34%;
+                    }
+                }
+            }
+        }
+
     }
 
-    .hero-img img {
-        margin-top: -4.5px;
-        width: 107.65%;
-        padding-right: 7rem;
-        @include breakPointsDown(large){
-            width: 100%;
-            justify-self: start;
-        }
-        @include breakPointsDown(medium){
-            width: 110%;
-            padding-left: 5rem;
-        }
-    }
-    
-    .hero-content {
-        width: 50%;
-        padding: 12rem;
-        @include breakPointsDown(large){
-            padding: 9rem;
-        }
-        @include breakPointsDown(medium){
-            padding: 5rem;
-            padding-top: 0rem;
-        }
-    
-        h2 {
-            color: $veryDarkDesaturatedBlue;
-            width: 50rem;
-            font-family: 'Fraunces', serif;
-            font-size: 4rem;
-            font-weight: 800;
-            @include breakPointsDown(large){
-                width: 40rem;
-            }
-            @include breakPointsDown(medium){
-                font-size: 3rem;
-            }
-            @include breakPointsDown(small){
-                width: 300px;
-                font-size: 2rem;
-            }
-        }
-        p {
-            width: 450px;
-            color: $veryDarkGrayishBlue;
-            line-height: 2.5rem;
-            @include breakPointsDown(large){
-                width: fit-content;
-            }
-            @include breakPointsDown(medium){
-                font-size: 1.6rem;
-            }
-            @include breakPointsDown(small){
-                width: 240px;
-                font-size: 1.5rem;
-            }
-        }
-        a {
-            position: relative;
-            display: block;
-            padding-top: 2.5rem;
-            font-size: 1.7rem;
-            text-transform: uppercase;
-            font-family: 'Fraunces', serif;
-            color: $veryDarkDesaturatedBlue;
-            // z-index: 1000;
-            @include breakPointsDown(medium){
-                padding-top: 1rem;
-            }
-    
-            &::after {
-                content: "";
-                position: absolute;
-                left: -5px;
-                bottom: -5%;
-                border-radius: 3px;
-                width: 25%;
-                height: 6px;
-                background-color: $softRed;
-                opacity: .5;
-                z-index: 9;
-            }
-        }
-    }
-    
 }
