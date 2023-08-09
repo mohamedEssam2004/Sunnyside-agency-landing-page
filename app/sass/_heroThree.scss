@@ -1,0 +1,65 @@
+.heroThree {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: -4px;
+    @include breakPointsDown(small){
+        flex-direction: column;
+    }
+
+    .left {
+        padding-top: 56rem;
+        padding-bottom: 4rem;
+        flex-basis: 50%;
+        background-image: url(../../images/desktop/image-graphic-design.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @include breakPointsDown(large){
+            flex-basis: 49.1%;
+        }
+        @include breakPointsDown(medium){
+            padding-top: 50rem;
+        }
+        @include breakPointsDown(small){
+            flex-basis: 100%;
+            width: 100%;
+        }
+    }
+    .right {
+        padding-top: 55rem;
+        flex-basis: 50%;
+        background-image: url(../../images/desktop/image-photography.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-bottom: 5rem;
+        @include breakPointsDown(large){
+            flex-basis: 50.9%;
+        }
+        @include breakPointsDown(medium){
+            padding-top: 49rem;
+        }
+        @include breakPointsDown(small){
+            flex-basis: 100%;
+            width: 100%;
+        }
+    }
+
+    h2 {
+        margin-top: -14rem;
+        font-family: 'Fraunces', serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: $darkDesaturatedCyan;
+    }
+    p {
+        color: $darkModerateCyan;
+        font-size: 1.7rem;
+        width: 370px;
+        margin: 0 auto;
+    }
+
+}

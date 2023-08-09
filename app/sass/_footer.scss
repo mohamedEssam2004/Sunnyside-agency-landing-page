@@ -1,0 +1,44 @@
+footer {
+
+    width: 100%;
+    height: auto;
+    background-color: rgb(145, 211, 198);
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-top: -10rem;
+
+
+
+    .logo {
+        padding-bottom: 2.8rem;
+    }
+
+    a {
+        display: inline-block;
+        color: $darkDesaturatedCyan;
+        font-size: 1.45rem;
+        transition: all 250ms ease-in-out;
+        &:not(:last-child){
+            margin-right: 30px;
+        }
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .social {
+        margin-top: 8rem;
+
+        img {
+            width: 15px;
+            transition: all 200ms ease-in-out;
+            &:not(:last-child){
+                margin-right: 2.5rem;
+            }
+            &:hover {
+                transform: scale(1.4);
+            }
+        }
+    }
+}
